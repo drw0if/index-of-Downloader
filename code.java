@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class code {
 	static boolean debug = true;
@@ -15,7 +16,9 @@ public class code {
 	public static void main(String... args) {
 		
 		try {
-			searchInSite(new URL("http://index-of.es"));			
+			Scanner stdin = new Scanner(System.in);
+			System.out.print("Url from indef-of: ");
+			searchInSite(new URL(stdin.nextLine()));			
 		
 		} catch (IOException e) {
 			if(debug)
